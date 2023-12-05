@@ -1,0 +1,28 @@
+package ARRAYLIST;
+
+import java.util.ArrayList;
+
+public class al_homo_hetero {
+
+	public static void main(String[] args) {
+		ArrayList a=new ArrayList();
+		a.add(25);
+		a.add("abc");
+		a.add(true);
+		a.add(85);
+		a.add(25);
+		ArrayList a2=new ArrayList();
+		a2.add(25);
+		a2.add(true);
+		a2.add(85);
+		a2.add('a');
+	//	a2.removeAll(a);
+		a.retainAll(a2);
+		System.out.println(a);
+		System.out.println(a2);
+		
+				
+
+	}
+
+}

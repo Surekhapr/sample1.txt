@@ -1,0 +1,70 @@
+console.log(1);
+console.log(2);
+test(demo)
+console.log(3);
+console.log(4);
+
+function test(cb)
+{
+ console.log("test start");
+ cb()
+console.log("i am a test");
+}
+console.log(5)
+
+   function demo()
+{
+    console.log("i am a demo");
+}
+
+console.log(1);
+setTimeout(()=>{alert("hi")},1000)
+console.log(1);
+console.log(2);
+var promise1=new Promise((res,rej)=>{
+    var booking=false
+    if(booking) {
+        res("booking ")
+    }
+    else{
+         rej("booking slots are full")
+    }  
+}).then((response)=>{
+    console.log(response);
+   return "we can proceed further action"
+}).then((resp1)=>{
+    console.log(resp1);
+    console.log("proceed for the payment");
+}).catch((e)=>{
+    console.log(e);
+})
+console.log(3);
+
+var std={
+    name1:"raju",
+    id:123
+}
+
+console.log(std);
+console.log(std.name1);
+var jobj=JSON.stringify(std)
+console.log(jobj);
+
+var regObj=JSON.parse(jobj)
+console.log(regObj);
+var tab=document.querySelector("table")
+fetch("https://api.github.com/uers").then((e)=>{
+console.log(e);
+return e.json()
+}).then((e1)=>{
+    console.log(e1);
+    e1.forEach(element => {
+        tab.innerHTML+=`  <tr>
+        <td style="width: 10vw;">${element.id}</td>
+        <td style="width: 10vw;">${element.login}</td>
+        <td><img src=${element.avatar_url} alt="" height="200px" width="200px"></td>
+    </tr>`
+    });
+}).catch((e)=>{
+    console.log(e.message);
+})"

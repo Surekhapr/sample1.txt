@@ -1,0 +1,45 @@
+package tumkur;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+public class mainclass {
+
+	public static void main(String[] args) {
+		EntityManagerFactory f=Persistence.createEntityManagerFactory("dev");
+		EntityManager e=f.createEntityManager();
+		EntityTransaction t=e.getTransaction();
+		
+		sample s=new sample();
+		s.setNumber(5677886l);
+		s.setAddress("tumkur");
+		s.setName("sam");
+		
+		t.begin();
+		e.persist(s);
+		t.commit();
+		
+		 sample s1 = e.find(sample.class, 5);
+		 System.out.println(s);
+		 
+		 sample s2 = e.find(sample.class, 1);
+		 //System.out.println(s);
+		 t.begin();
+		 e.remove(s);
+		 t.commit();
+		 
+		 sample a = e.find(sample.class, 2);
+		 a.setAddress("ballapur");
+		 t.begin();
+		 e.merge(a);
+		 t.commit();
+		 
+		 
+		 
+		
+
+	}
+
+}

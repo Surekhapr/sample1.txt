@@ -1,0 +1,16 @@
+package revise_pgm;
+
+import java.util.ArrayList;
+
+public class add2 {
+
+	public static void main(String[] args) {
+		ArrayList a=new 	ArrayList();
+		a.add(26);
+		a.add("hello");
+		a.add(85);
+		a.add('a');
+		System.out.println(a.get(1));
+	}
+
+}

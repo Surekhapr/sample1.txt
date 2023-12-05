@@ -1,0 +1,18 @@
+package ARRAYLIST;
+
+import java.util.HashSet;
+
+public class hashset {
+
+	public static void main(String[] args) {
+		HashSet h=new HashSet ();
+		h.add(78);
+		h.add(76.8);
+		h.add("hello");
+		h.add('a');
+		h.add(null);
+		System.out.println(h);
+		
+	}
+
+}

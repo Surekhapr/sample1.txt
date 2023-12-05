@@ -1,0 +1,16 @@
+package revise_pgm;
+
+import java.util.PriorityQueue;
+
+public class priorityq {
+public static void main(String[] args) {
+	PriorityQueue p=new PriorityQueue();
+	p.add(21);
+	p.add(221);
+	p.add(29.9);
+	p.add(78);
+	System.out.println(p);
+	
+}
+
+}

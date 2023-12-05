@@ -1,0 +1,28 @@
+package ARRAYLIST;
+
+import java.util.ArrayList;
+
+public class removeall {
+
+	public static void main(String[] args) {
+		ArrayList a = new ArrayList();
+		a.add("hello");
+		a.add('a');
+		a.add(85);
+		a.add(25);
+		a.set(0, "jaav");
+		a.remove(0);
+		System.out.println(a);
+		
+		ArrayList a2 = new ArrayList();
+		a2.add("bye");
+		a2.add('b');
+		a2.add(85);
+		a2.add(25);
+		System.out.println(a2);
+		a.addAll(a2);
+		System.out.println(a);
+		System.out.println(a2);
+		
+	}
+}

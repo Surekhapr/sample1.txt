@@ -1,0 +1,19 @@
+package ARRAYLIST;
+
+import java.util.PriorityQueue;
+
+public class priority {
+
+	public static void main(String[] args) {
+		PriorityQueue p=new PriorityQueue();
+		p.add(9);
+		p.add(87);
+		p.add(89);
+		p.add(65);
+		p.add(45);
+		System.out.println(p);
+		//System.out.println(p);
+
+	}
+
+}

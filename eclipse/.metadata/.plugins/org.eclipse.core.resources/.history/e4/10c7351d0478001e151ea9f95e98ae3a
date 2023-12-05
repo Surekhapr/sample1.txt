@@ -1,0 +1,30 @@
+package revise_pgm;
+
+import java.util.ArrayList;
+
+public class add2 {
+
+	public static void main(String[] args) {
+		ArrayList a=new 	ArrayList();
+		a.add(25);
+		a.add("abc");
+		a.add(true);
+		a.add(85);
+		a.add(25);
+		
+		ArrayList a2=new 	ArrayList();
+		a2.add(26);
+		a2.add(true);
+		a2.add(85);
+		a2.add('a');
+		a2.add(25);
+		//System.out.println(a);
+		//System.out.println(a2);
+		System.out.println(a.containsAll(a2));
+//		System.out.println(a.removeAll(a2));
+          //System.out.println(a.retainAll(a2));
+		boolean b=a.containsAll(a2);
+		System.out.println(b);
+	}
+
+}

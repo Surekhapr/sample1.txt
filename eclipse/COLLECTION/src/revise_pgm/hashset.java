@@ -1,0 +1,21 @@
+package revise_pgm;
+
+import java.util.HashSet;
+
+public class hashset {
+
+	public static void main(String[] args) {
+		HashSet h=new HashSet();
+		h.add('a');
+		h.add("abc");
+		h.add(90.9);
+		h.add(null);
+		h.add(99);
+//		System.out.println(h);
+		for( Object o:h)
+		{
+			System.out.println(o);
+		}
+	}
+
+}

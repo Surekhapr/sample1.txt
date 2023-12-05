@@ -1,0 +1,23 @@
+package ARRAYLIST;
+
+import java.util.ArrayList;
+
+public class add {
+
+	public static void main(String[] args) {
+		ArrayList a=new ArrayList();
+		a.add(224);
+		a.add("hello");
+		a.add(null);
+		a.add('a');
+		a.add(true);
+		a.add(24.99);
+		a.add(0,11);
+		
+		System.out.println(a.isEmpty());
+		System.out.println(a.size());
+		System.out.println(a.contains(224));
+
+	}
+
+}

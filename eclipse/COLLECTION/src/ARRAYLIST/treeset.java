@@ -1,0 +1,18 @@
+package ARRAYLIST;
+
+import java.util.TreeSet;
+
+public class treeset {
+
+	public static void main(String[] args) {
+		TreeSet t=new TreeSet();
+		t.add(88);
+		t.add(76);
+		t.add(45);
+		t.add(100);
+		t.add(100);
+		System.out.println(t);
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package revise_pgm;
+
+import java.util.ArrayList;
+
+public class add {
+
+	public static void main(String[] args) {
+		ArrayList a=new ArrayList();
+		a.add('a');
+		a.add(10);
+		a.add(true);
+		a.add("suri");
+		a.add(2,209.8);
+		System.out.println(a.isEmpty());
+		a.clear();
+		System.out.println(a.isEmpty());
+	}
+
+}

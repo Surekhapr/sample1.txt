@@ -1,0 +1,31 @@
+package ARRAYLIST;
+
+import java.util.ArrayList;
+
+public class al_homo_hetero {
+
+	public static void main(String[] args) {
+		ArrayList a=new ArrayList();
+		a.add(24);
+		a.add("hell");
+		a.add('a');
+		a.add(null);
+		a.add(55.99);
+		//a.remove(0);
+		//a.remove()
+		a.remove(2);
+		System.out.println(a);
+		ArrayList a2=new ArrayList();
+		a2.add(241);
+		a2.add("hell0java");
+		a2.add('a');
+		a2.add(null);
+		a2.add(595.99);
+		a2.addAll(a);
+		System.out.println(a2);
+		
+				
+
+	}
+
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-style: italic;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<form action="file:///C:/Users/Faculty/Desktop/JS-1/new.html">
+    name: <input type="text" id="name1"><br><br>
+    <p class="nameErr">name</p>
+   number: <input type="text" id="num"><br><br>
+   <p class="numErr">num</p>
+
+    email: <input type="text" id="email"><br><br>
+    <p class="emailErr">email</p>
+
+    pass: <input type="text" id="pass"><br><br>
+    <p class="passErr">pass</p>
+
+  cpass: <input type="text" id="cpass"><br><br>
+  <p class="cpassErr">cpass</p>
+
+  <input type="reset">   
+  <input type="submit" id="sub">   
+    
+</form>
+    <script src="./Index.js">
+        var name1=document.querySelector("#name1")
+var num=document.querySelector("#num")
+var email=document.querySelector("#email")
+var pass=document.querySelector("#pass")
+var cpass=document.querySelector("#cpass")
+var sub=document.querySelector("#sub")
+// error msg
+var namErr=document.querySelector(".nameErr")
+var numErr=document.querySelector(".numErr")
+var emailErr=document.querySelector(".emailErr")
+var passErr=document.querySelector(".passErr")
+var cpassErr=document.querySelector(".cpassErr")
+sub.addEventListener("click",(e)=>{
+    e.preventDefault()
+    var nameValue=name1.value;
+    var numValue=num.value;
+    var emailValue=email.value;
+    var passValue=pass.value;
+    var cpassValue=cpass.value;
+
+    // console.log(nameValue);
+    // console.log(numValue);
+testName(nameValue)
+console.log(testEmail(emailValue));
+testPass(passValue)
+})
+
+function testName(para)
+{
+    var name1=para;
+    let asssumption=true
+
+ for(let i=0;i<name1.length;i++)
+ {
+    if(name1.includes(i))
+    {
+      asssumption =false;
+      break
+    }
+ }
+ if(asssumption==true)
+ {
+    console.log("is a valid");
+    namErr.innerText="is a valid name"
+ }
+ else{
+    console.log("is a invalid");
+    namErr.innerText="is a invalid name"
+
+ }
+
+}
+// testName()
+
+
+function testEmail(para)
+{
+    // var email1="abc@gamil"
+    var email1=para
+
+    if(email1.includes("@") && email1.includes(".com"))
+    {
+        emailErr.innerText="is a valid email"
+        return true
+    }
+    else{
+        emailErr.innerText="is a invalid email"
+
+        return false
+    }
+}
+
+// console.log(testEmail());
+
+function testPass(para)
+{
+    // var str="Abc@1230"
+    var str=para
+
+    let length1=false;
+    let uc=0
+    let lc=0
+    let sc=0
+    let nc=0
+    if(str.length>=8)
+    {
+        length1=true;
+        
+    }
+for(let i=0;i<str.length;i++)
+{
+    var asci=str[i].charCodeAt()
+    if(asci>=65 && asci<=90)
+    {
+        uc++
+    }
+    else if(asci>=97 && asci<=122)
+    {
+        lc++
+    }
+    else if( asci>=48 && asci<=57)
+    {
+        nc++
+    }
+    else{
+        sc++
+    }
+}
+// console.log(lc+"lc");
+// console.log(sc+"sc");
+// console.log(nc+"nc");
+// console.log(uc+"uc");
+if(length1==false){
+passErr.innerText="pass should be min of 8 char length"
+}
+else if(nc<=0)
+{
+passErr.innerText="pass should be min of 1 numeric char "
+
+    console.log("include min i nc");
+}
+else if(uc<=0)
+{
+passErr.innerText="pass should be min of 1 upper case char "
+
+    console.log("include min 1 uc");
+
+}
+else if(lc<=0) 
+{
+passErr.innerText="pass should be min of 1 lower case char "
+
+    console.log("include min 1 lc"); 
+}
+
+else if(sc<=0)
+{
+passErr.innerText="pass should be min of 1 spl case char "
+
+    console.log("include min 1 sc"); 
+}
+else{
+passErr.innerText="is a valid password"
+    
+    console.log("is a  valid");
+}
+}
+// testPass("Abc278909")
+
+    </script>
+</body>
+</html>

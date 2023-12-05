@@ -1,0 +1,16 @@
+package revise_pgm;
+
+public class boxing {
+
+	public static void main(String[] args) {
+		int a=10;
+		System.out.println(a);
+		Integer i=new Integer(a);
+		System.out.println(i);
+		char c='a';
+		Character e=new Character(c);
+		System.out.println(e);
+
+	}
+
+}

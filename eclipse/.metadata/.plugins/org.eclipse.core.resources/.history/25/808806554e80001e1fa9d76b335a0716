@@ -1,0 +1,15 @@
+package simple_maven;
+import java.sql.*;
+
+public class pgm4 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/details","root","root");
+		PreparedStatement p=c.prepareStatement("create table product(id integer,name varchar(89) ");
+		p.execute();
+		c.close();
+		System.out.println("done");
+	}
+
+}
